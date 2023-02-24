@@ -14,6 +14,7 @@ st.image(img)
 img=ImageOps.grayscale(img)
 st.image(img)
 img=np.asarray(img)
+st.write(img.shape)
 #img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 emotions = ('Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral')
 string=np.argmax(model.predict(img), axis=-1)[0]
