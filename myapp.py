@@ -6,12 +6,12 @@ from keras.models import model_from_json
 #from keras.preprocessing.image import img_to_array
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration, VideoProcessorBase, WebRtcMode
 
-# load model
+# emotions label
 emotions = ('Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral')
 # load json and create model
 
-#load weights into new model
-classifier.load_weights("Fer_Model.h5")
+
+
 json_file = open("model.json", "r")
 loaded_json_model = json_file.read()
 json_file.close()
