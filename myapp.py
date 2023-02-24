@@ -17,7 +17,7 @@ loaded_json_model = json_file.read()
 json_file.close()
 model = model_from_json(loaded_json_model)
 model.load_weights("model_weights.h5")
-load face
+#load face
 try:
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 except Exception:
