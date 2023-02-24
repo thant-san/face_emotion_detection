@@ -28,4 +28,4 @@ else:
 #img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
   emotions = ('Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral')
   string=np.argmax(classifier.predict(img.reshape((1,48,48,1))), axis=-1)[0]
-  st.write(string)
+  st.write(string,emotions)
