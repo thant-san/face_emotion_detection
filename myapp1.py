@@ -7,9 +7,9 @@ import cv2
 from tensorflow.keras.models import load_model
 #load_model
 json_file=open('model.json','r')
-loaded_model_json=json_file.read()
+classifier=json_file.read()
 json_file.close()
-classifier.load_weights('Fer_Model.h5')
+classifier=classifier.load_weights('Fer_Model.h5')
 
 file_upload=st.file_uploader("insert")
 if file_upload is None:
