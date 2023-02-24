@@ -9,6 +9,8 @@ model=load_model('Fer_Model.h5')
 file_upload=st.file_uploader("insert")
 img=Image.open(file_upload)
 size=(277,277)
+img=ImageOps.fit(img, size, Image.ANTIALIAS)
+st.image(img)
 img=ImageOps.grayscale(img)
 st.image(img)
 
