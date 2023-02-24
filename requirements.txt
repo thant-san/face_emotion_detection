@@ -1,8 +1,9 @@
-numpy~=1.21.2
-streamlit~=0.87.0
-keras~=2.4.3
+numpy
 matplotlib
+tensorflow
+runipy
 opencv-python-headless
-tensorflow-cpu
-streamlit_webrtc
-
+streamlit
+pandas
+streamlit-option-menu
+seaborn
