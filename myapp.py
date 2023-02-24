@@ -9,10 +9,6 @@ from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfigura
 # load model
 emotions = ('Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral')
 # load json and create model
-'''json_file = open('model.json', 'r')
-loaded_model_json = json_file.read()
-json_file.close()
-classifier = model_from_json(loaded_model_json)
 
 # load weights into new model
 classifier.load_weights("Fer_Model.h5")'''
