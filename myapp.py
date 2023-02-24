@@ -3,7 +3,7 @@ import cv2
 import streamlit as st
 from tensorflow import keras
 from keras.models import model_from_json
-from keras.preprocessing.image import img_to_array
+#from keras.preprocessing.image import img_to_array
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration, VideoProcessorBase, WebRtcMode
 
 # load model
@@ -40,7 +40,7 @@ class Faceemotion(VideoTransformerBase):
             roi_gray = cv2.resize(roi_gray, (48, 48), interpolation=cv2.INTER_AREA)
             if np.sum([roi_gray]) != 0:
                 roi = roi_gray.astype('float') / 255.0
-                roi = img_to_array(roi)
+                roi = np.asarray(roi)
                 roi = np.expand_dims(roi, axis=0)
                 prediction = classifier.predict(roi)[0]
                 maxindex = int(np.argmax(prediction))
