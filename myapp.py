@@ -7,16 +7,20 @@ from keras.models import model_from_json
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration, VideoProcessorBase, WebRtcMode
 
 # load model
-emotion_dict  = ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral')
+emotions = ('Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral')
 # load json and create model
-json_file = open('model.json', 'r')
+'''json_file = open('model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 classifier = model_from_json(loaded_model_json)
 
 # load weights into new model
-classifier.load_weights("Fer_Model.h5")
-
+classifier.load_weights("Fer_Model.h5")'''
+json_file = open("model.json", "r")
+loaded_json_model = json_file.read()
+json_file.close()
+model = model_from_json(loaded_json_model)
+model.load_weights("model_weights.h5")
 #load face
 try:
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -42,9 +46,9 @@ class Faceemotion(VideoTransformerBase):
                 roi = roi_gray.astype('float') / 255.0
                 roi = np.asarray(roi)
                 roi = np.expand_dims(roi, axis=0)
-                prediction = classifier.predict(roi)[0]
+                prediction = model.predict(roi)[0]
                 maxindex = int(np.argmax(prediction))
-                finalout = emotion_dict[maxindex]
+                finalout = emotions[maxindex]
                 output = str(finalout)
             label_position = (x, y)
             cv2.putText(img, output, label_position, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
