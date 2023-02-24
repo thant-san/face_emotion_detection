@@ -5,7 +5,7 @@ import numpy as np
 import tensorflow as tf
 import cv2
 from tensorflow.keras.models import load_model
-model=load_model('ths.h5')
+model=load_model('Fer_Model.h5')
 file_upload=st.file_uploader("insert")
 img=Image.open(file_upload)
 size=(277,277)
