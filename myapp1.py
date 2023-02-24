@@ -19,11 +19,11 @@ if file_upload is None:
 else:
   img=Image.open(file_upload)
 
-  size=(48,48)
+  size=(227,227)
   img=ImageOps.fit(img, size, Image.ANTIALIAS)
   st.image(img)
   img=ImageOps.grayscale(img)
-  st.image(img)
+  #st.image(img)
   img=np.asarray(img)
   st.write(img.shape)
 #img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
