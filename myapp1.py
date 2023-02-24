@@ -19,7 +19,7 @@ if file_upload is None:
 else:
   img=Image.open(file_upload)
 
-  size=(227,227)
+  size=(48,48)
   img=ImageOps.fit(img, size, Image.ANTIALIAS)
   st.image(img)
   img=ImageOps.grayscale(img)
