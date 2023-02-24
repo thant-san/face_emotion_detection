@@ -1,9 +1,10 @@
 numpy
 matplotlib
 tensorflow
-runipy
+
 opencv-python-headless
 streamlit
 pandas
 streamlit-option-menu
-seaborn
+
+keras
