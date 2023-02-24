@@ -5,7 +5,12 @@ import numpy as np
 import tensorflow as tf
 import cv2
 from tensorflow.keras.models import load_model
-model=load_model('Fer_Model.h5')
+#load_model
+json_file=open('model.json','r')
+loaded_model_json=json_file.read()
+json_file.close()
+classifier.load_weights('Fer_Model.h5')
+
 file_upload=st.file_uploader("insert")
 if file_upload is None:
   st.write("input image")
@@ -21,5 +26,5 @@ else:
   st.write(img.shape)
 #img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
   emotions = ('Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral')
-  string=np.argmax(model.predict(img.reshape((1,48,48,1))), axis=-1)[0]
+  string=np.argmax(classifier.predict(img.reshape((1,48,48,1))), axis=-1)[0]
   st.write(string)
