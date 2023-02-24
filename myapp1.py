@@ -4,12 +4,13 @@ from PIL import Image,ImageOps
 import numpy as np
 import tensorflow as tf
 import cv2
-from tensorflow.keras.models import load_model
+from tensorflow.keras.models import model_from_json
 #load_model
 json_file=open('model.json','r')
-classifier=json_file.read()
+loaded_model_json=json_file.read()
 json_file.close()
-classifier=classifier.load_weights('Fer_Model.h5')
+classifier=model_from_json(loaded_model_json)
+classifier.load_weights('Fer_Model.h5')
 
 file_upload=st.file_uploader("insert")
 if file_upload is None:
