@@ -7,15 +7,15 @@ from keras.preprocessing.image import img_to_array
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration, VideoProcessorBase, WebRtcMode
 
 # load model
-emotion_dict = {0:'angry', 1 :'happy', 2: 'neutral', 3:'sad', 4: 'surprise'}
+emotion_dict  = ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral')
 # load json and create model
-json_file = open('emotion_model1.json', 'r')
+json_file = open('model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 classifier = model_from_json(loaded_model_json)
 
 # load weights into new model
-classifier.load_weights("emotion_model1.h5")
+classifier.load_weights("Fer_Model.h5")
 
 #load face
 try:
