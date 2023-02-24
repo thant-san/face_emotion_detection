@@ -16,5 +16,5 @@ st.image(img)
 img=np.asarray(img)
 #img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 emotions = ('Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral')
-string=np.argmax(model.predict(img, axis=-1)[0]
+string=np.argmax(model.predict(img), axis=-1)[0]
 st.write('string')
