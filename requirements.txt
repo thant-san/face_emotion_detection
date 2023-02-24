@@ -6,5 +6,5 @@ opencv-python-headless
 streamlit
 pandas
 streamlit-option-menu
-
+streamlit_webrtc
 keras
