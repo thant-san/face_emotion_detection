@@ -1,1 +1,1 @@
-# project_face
+# Face emotion detection using cnn
