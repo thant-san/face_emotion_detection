@@ -49,3 +49,12 @@ if img_file_buffer is not None:
     # Check the shape of cv2_img:
     # Should output shape: (height, width, channels)
     st.write(cv2_img.shape)
+    img=ImageOps.grayscale(cv2_img)
+  #st.image(img)
+    img=np.asarray(img)
+    st.write(img.shape)
+#img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    emotions = ('Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral')
+    max_index=np.argmax(model.predict(img.reshape((1,48,48,1))), axis=-1)[0]
+    predicted_emotion = emotions[max_index] 
+    st.write(f'predicted emotion is {predicted_emotion}')
