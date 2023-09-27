@@ -86,3 +86,5 @@ Non-trainable params: 3,968
 ### FER-2013 Dataset
 
 -Dataset link:https://www.kaggle.com/datasets/nicolejyt/facialexpressionrecognitio
+### streamlit
+-https://thant-san-face-emotion-detection-myapp-9wg7an.streamlit.app/
