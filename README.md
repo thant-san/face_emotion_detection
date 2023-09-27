@@ -8,7 +8,7 @@ FER-2013 Using CNN
 -use haarcascade to detect the face
 -extract the face aera
 -predict the extracted face using CNN 
-#Model: "sequential"
+# Model: "sequential"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
 =================================================================
