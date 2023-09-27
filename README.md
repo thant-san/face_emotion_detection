@@ -4,7 +4,11 @@
  The model is trained on FER-2013 dataset which was published on International Conference on Machine Learning (ICML).This dataset consists 
  of 35887 grayscale, 48x48 sized face images with seven emotions - angry, disgusted, fearful, happy, neutral, sad and surprised.
 FER-2013 Using CNN
-Model: "sequential"
+## Model approch
+-use haarcascade to detect the face
+-extract the face aera
+-predict the extracted face using CNN 
+#Model: "sequential"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
 =================================================================
@@ -86,5 +90,6 @@ Non-trainable params: 3,968
 ### FER-2013 Dataset
 
 -Dataset link:https://www.kaggle.com/datasets/nicolejyt/facialexpressionrecognitio
-### streamlit
+### Streamlit
 -https://thant-san-face-emotion-detection-myapp-9wg7an.streamlit.app/
+
