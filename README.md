@@ -85,4 +85,4 @@ Non-trainable params: 3,968
 
 ### FER-2013 Dataset
 
--Dataset link:https://www.kaggle.com/datasets/nicolejyt/facialexpressionrecognition
+-Dataset link:https://www.kaggle.com/datasets/nicolejyt/facialexpressionrecognitio
