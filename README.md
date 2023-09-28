@@ -94,7 +94,12 @@ Total params: 4,478,727
 Trainable params: 4,474,759
 Non-trainable params: 3,968
 
+# epoch=50
+# optimizer=Adam
+# loss = "categorical_crossentropy"
 
 ### Streamlit
 -https://thant-san-face-emotion-detection-myapp-9wg7an.streamlit.app/
+# acknowledgement
+# reference
 
