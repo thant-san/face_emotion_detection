@@ -10,7 +10,7 @@ FER-2013 Using CNN
 -predict the extracted face using CNN 
 ## Model: "sequential"
 _________________________________________________________________
- Layer (type)                Output Shape              Param #   
+ Layer (type)                Output Shape              Param    
 =================================================================
  conv2d (Conv2D)             (None, 48, 48, 64)        640       
                                                                  
