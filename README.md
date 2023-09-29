@@ -101,4 +101,5 @@ Non-trainable params: 3,968
 ### Acknowledgement
 - This model is tend to support sentimental anaylysis mainly for food factor where robots are serving as a waiter. Furthermore improvement are still needed to be used as a real world application.
 # Reference
-
+- https://github.com/atulapra/Emotion-detection
+- kaggle
