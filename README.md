@@ -3,17 +3,17 @@
  This project purposes is to pedict the emotions of the person's face into seven categories using deep learning convolutional neural network.
  The model is trained on FER-2013 dataset which was published on International Conference on Machine Learning (ICML).This dataset consists 
  of 35887 grayscale, 48x48 sized face images with seven emotions - angry, disgusted, fearful, happy, neutral, sad and surprised.
-FER-2013 Using CNN
+
 
 ### FER-2013 Dataset
 
--Dataset link:https://www.kaggle.com/datasets/nicolejyt/facialexpressionrecognitio
+- Dataset link:https://www.kaggle.com/datasets/nicolejyt/facialexpressionrecognitio
 ## Model approch
--use haarcascade to detect the face
+- use haarcascade to detect the face
 
--extract the face aera
+- extract the face aera
 
--predict the extracted face using CNN 
+- predict the extracted face using CNN 
 
 ## Model: "sequential"
 _________________________________________________________________
@@ -96,9 +96,9 @@ Non-trainable params: 3,968
 
 
 ### Streamlit
--https://thant-san-face-emotion-detection-myapp-9wg7an.streamlit.app/
+- https://thant-san-face-emotion-detection-myapp-9wg7an.streamlit.app/
 
 ### Acknowledgement
--This model is tend to support sentimental anaylysis mainly for food factor where robots are serving as a waiter. Furthermore improvement are still needed to be used as a real world application.
+- This model is tend to support sentimental anaylysis mainly for food factor where robots are serving as a waiter. Furthermore improvement are still needed to be used as a real world application.
 # Reference
 
