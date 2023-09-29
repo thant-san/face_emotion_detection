@@ -98,6 +98,7 @@ Non-trainable params: 3,968
 ### Streamlit
 -https://thant-san-face-emotion-detection-myapp-9wg7an.streamlit.app/
 
-# acknowledgement
-# reference
+### Acknowledgement
+-This model is tend to support sentimental anaylysis mainly for food factor where robots are serving as a waiter. Furthermore improvement are still needed to be used as a real world application.
+# Reference
 
